@@ -8,7 +8,15 @@ public class Main {
     }
 
     public static double avg(int num) {
-        //todo Дописать логику работы метода сюда. Метод main не трогаем!!!
-        return 0; //todo заменить 0 на корректный результат.
+        //Как сделать из числа строку:
+        String numStr = String.valueOf(num);
+        //Создаем переменную, которая будет принимать в себя результат сложения.
+        double sum = 0;
+        //Используем цикл, делаем i = 0 по причине того, что массив начинается с нулевого индекса
+        //i < numStr.length, чтобы цикл не заходил дальше длины массива
+        for (int i = 0; i < numStr.length(); i++) {
+            sum += Integer.parseInt(String.valueOf(numStr.charAt(i)));
+        }
+        return sum / numStr.length();
     }
 }
